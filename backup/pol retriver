@@ -1,0 +1,9 @@
+@client.command()
+async def results(ctx, channel: discord.TextChannel, msgID: int):
+    msg = await channel.fetch_message(msgID)
+    reaction = get(msg.reactions, emoji='✅')
+    count1 = reaction.count # Count the one reaction
+    reaction2 = get(msg.reactions, emoji="❌")
+    count2 = reaction2.count # Count the second reaction
+    await ctx.send(f"✅**: {count1 - 1}** and ❌**: {count2 - 1}**") # -1 is used to exclude the bot
+

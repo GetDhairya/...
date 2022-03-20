@@ -1,7 +1,7 @@
 import nextcord
 from nextcord.ext import commands
 
-class nitro(commands.Cog):
+class random(commands.Cog):
     def init(self, bot):
         self.bot = bot
 
@@ -22,5 +22,6 @@ class Green(nextcord.ui.View):
       await interaction.response.send_message("https://tenor.com/view/rick-roll-gif-23595798", ephemeral=True)
       self.value = True
 
+
 def setup(bot):
-    bot.add_cog(nitro(bot))
+    bot.add_cog(random(bot))
